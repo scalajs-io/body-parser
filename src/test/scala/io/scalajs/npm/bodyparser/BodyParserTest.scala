@@ -1,6 +1,7 @@
 package io.scalajs.npm.bodyparser
 
-import io.scalajs.npm.express.Express
+import io.scalajs.JSON
+import io.scalajs.npm.express.{Express, Request, Response}
 import org.scalatest.FunSpec
 
 /**
@@ -19,6 +20,12 @@ class BodyParserTest extends FunSpec {
 
       // parse application/json
       app.use(BodyParser.json())
+
+      app.use((req: Request, res: Response) => {
+        res.setHeader("Content-Type", "text/plain")
+        res.write("you posted:\n")
+        res.end(JSON.stringify(req.body, null, 2))
+      })
     }
 
   }

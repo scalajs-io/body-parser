@@ -32,8 +32,9 @@ $ sbt test
 #### Examples
 
 ```scala
+import io.scalajs.JSON
 import io.scalajs.npm.bodyparser._
-import io.scalajs.npm.express.Express
+import io.scalajs.npm.express.{Express, Request, Response}
 
 val app = Express()
 
@@ -42,6 +43,12 @@ app.use(BodyParser.urlencoded(new UrlEncodedBodyOptions(extended = false)))
 
 // parse application/json 
 app.use(BodyParser.json())
+
+app.use((req: Request, res: Response) => {
+    res.setHeader("Content-Type", "text/plain")
+    res.write("you posted:\n")
+    res.end(JSON.stringify(req.body, null, 2))
+})
 ```
 
 #### Artifacts and Resolvers
