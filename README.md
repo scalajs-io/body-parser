@@ -1,8 +1,10 @@
 Body-parser API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [body-parser](https://www.npmjs.com/package/body-parser)
+[body-parser](https://www.npmjs.com/package/body-parser) - Node.js body parsing middleware.
 
-Node.js body parsing middleware.
+#### Description
+
+Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
 
 #### Build Dependencies
 

@@ -6,17 +6,17 @@ import sbt._
 import scala.language.postfixOps
 
 val apiVersion = "1.16.0"
-val scalaJsIOVersion = "0.3.0.3"
+val scalaJsIOVersion = "0.3.0.4-SNAPSHOT"
 val scalaJsVersion = "2.12.1"
 
-homepage := Some(url("https://github.com/scalajs.io/body-parser"))
+homepage := Some(url("https://github.com/scalajs-io/body-parser"))
 
 lazy val root = (project in file(".")).
   enablePlugins(ScalaJSPlugin).
   settings(
     name := "body-parser",
     organization := "io.scalajs.npm",
-    description := "Body-parser API bindings for Scala.js",
+    description := "Node.js body parsing middleware",
     version := apiVersion,
     scalaVersion := scalaJsVersion,
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:implicitConversions", "-Xlint"),
@@ -26,7 +26,7 @@ lazy val root = (project in file(".")).
     libraryDependencies ++= Seq(
 	    "org.scala-lang" % "scala-reflect" % scalaJsVersion,
 	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
-	    "io.scalajs" %%% "nodejs" % "7.4.0",
+	    "io.scalajs" %%% "nodejs" % scalaJsIOVersion,
       "io.scalajs.npm" %%% "express" % "4.14.1"
   ))
 
