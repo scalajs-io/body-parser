@@ -1,5 +1,5 @@
 {
-  "name": "body-parser-scalajs",
+  "name": "body-parser-sjs",
   "version": "1.16.0",
   "private": true,
   "dependencies": {
