@@ -5,7 +5,7 @@ import sbt._
 
 import scala.language.postfixOps
 
-val scalaJsIOVersion = "0.4.0-pre1"
+val scalaJsIOVersion = "0.4.0-pre2"
 val scalaJsVersion = "2.12.1"
 
 homepage := Some(url("https://github.com/scalajs-io/body-parser"))
