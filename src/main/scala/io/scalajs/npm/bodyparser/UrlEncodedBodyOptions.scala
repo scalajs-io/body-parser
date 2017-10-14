@@ -1,7 +1,7 @@
 package io.scalajs.npm.bodyparser
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
+
 
 /**
   * Express Body Parser Options
@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation.ScalaJSDefined
   *                       request body and encoding is the encoding of the request. The parsing can be aborted by throwing an error.
   * @author lawrence.daniels@gmail.com
   */
-@ScalaJSDefined
+
 class UrlEncodedBodyOptions(var extended: js.UndefOr[Boolean] = js.undefined,
                             var inflate: js.UndefOr[Boolean] = js.undefined,
                             var limit: js.UndefOr[Int] = js.undefined,
