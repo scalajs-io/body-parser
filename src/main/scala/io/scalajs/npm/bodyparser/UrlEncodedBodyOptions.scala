@@ -27,7 +27,6 @@ import scala.scalajs.js
   *                       request body and encoding is the encoding of the request. The parsing can be aborted by throwing an error.
   * @author lawrence.daniels@gmail.com
   */
-
 class UrlEncodedBodyOptions(var extended: js.UndefOr[Boolean] = js.undefined,
                             var inflate: js.UndefOr[Boolean] = js.undefined,
                             var limit: js.UndefOr[Int] = js.undefined,

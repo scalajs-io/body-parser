@@ -5,8 +5,8 @@ import sbt._
 
 import scala.language.postfixOps
 
-val scalaJsIOVersion = "0.4.2"
-val scalaJsVersion = "2.12.3"
+val scalaJsIOVersion = "0.5.0"
+val scalaJsVersion = "2.12.8"
 
 homepage := Some(url("https://github.com/scalajs-io/body-parser"))
 
@@ -20,6 +20,7 @@ lazy val root = (project in file(".")).
     scalaVersion := scalaJsVersion,
     scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:implicitConversions", "-Xlint"),
     scalacOptions in(Compile, doc) ++= Seq("-no-link-warnings"),
+    scalacOptions += "-P:scalajs:sjsDefinedByDefault",
     autoCompilerPlugins := true,
     scalaJSModuleKind := ModuleKind.CommonJSModule,
     libraryDependencies ++= Seq(
